@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>雲端問題抽取機</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<div class="app-container">
+  <div id="status-tag" class="status-loading">同步中...</div>
+
+  <div class="card">
+    <div id="result-display">準備好了嗎？</div>
+    <button id="draw-btn" class="main-btn" onclick="drawQuestion()" disabled>
+      ? 隨機抽取問題
+    </button>
+  </div>
+
+  <div class="controls">
+    <button class="text-btn" onclick="toggleAddSection()">? 新增問題</button>
+    <button class="text-btn reset-btn" onclick="resetWeights()">
+      ? 重製全部
+    </button>
+  </div>
+
+  <div id="add-section" class="overlay hidden">
+    <div class="modal">
+      <h3>新增共享問題</h3>
+      <p class="hint">新問題被抽中的機率會更高喔！</p>
+      <input
+        type="text"
+        id="new-question-input"
+        placeholder="輸入問題內容..."
+      />
+      <div class="button-group">
+        <button class="cancel-btn" onclick="toggleAddSection()">取消</button>
+        <button id="submit-btn" class="submit-btn" onclick="addQuestion()">
+          確認送出
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
