@@ -1,0 +1,165 @@
+:root {
+  --primary: #6366f1;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --bg: #f8fafc;
+  --text: #1e293b;
+}
+
+body {
+  font-family: -apple-system, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  background-color: var(--bg);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app-container {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+#status-tag {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.status-loading {
+  background: #e2e8f0;
+  color: #64748b;
+}
+.status-ready {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.card {
+  background: white;
+  padding: 50px 25px;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+#result-display {
+  font-size: 24px;
+  font-weight: 800;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.main-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.main-btn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+.text-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  padding: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(4px);
+}
+.hidden {
+  display: none;
+}
+.modal {
+  background: white;
+  width: 85%;
+  max-width: 350px;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 2px solid #f1f5f9;
+  border-radius: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+.submit-btn {
+  flex: 2;
+  background: var(--success);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.cancel-btn {
+  flex: 1;
+  background: #f1f5f9;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.drawing {
+  animation: shake 0.12s infinite;
+  color: #94a3b8 !important;
+}
+@keyframes shake {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(1px, 2px) rotate(1deg);
+  }
+}
