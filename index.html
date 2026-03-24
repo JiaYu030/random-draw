@@ -11,34 +11,33 @@
       <div id="status-tag" class="status-loading">正在連線雲端...</div>
 
       <div class="card">
-        <div id="result-display">準備好抽籤了嗎？</div>
+        <div id="result-display">準備情侶大問答了嗎？</div>
         <button
           id="draw-btn"
           class="main-btn"
           onclick="drawQuestion()"
           disabled
         >
-          🎲 隨機抽取一個問題
+          🎲
         </button>
       </div>
 
       <div class="controls">
         <button class="text-btn" onclick="toggleAddSection()">
-          ➕ 新增共享問題
+          ➕ 新增問題
         </button>
         <button class="text-btn reset-btn" onclick="resetWeights()">
-          🔄 重製全部狀態
+          🔄 重製全部問題
         </button>
       </div>
 
       <div id="add-section" class="overlay hidden">
         <div class="modal">
-          <h3>新增共享問題</h3>
-          <p class="hint">💡 新問題被抽中的機率較高！</p>
+          <h3>🤫</h3>
           <input
             type="text"
             id="new-question-input"
-            placeholder="想問大家什麼呢？"
+            placeholder="想偷偷問什麼？"
             maxlength="50"
           />
           <div class="button-group">
